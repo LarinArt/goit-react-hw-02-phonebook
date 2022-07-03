@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React from 'react';
 import { nanoid } from 'nanoid';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import ContactsForm from './contactsForm/ContactsForm';
@@ -8,7 +8,7 @@ import { Message } from './message/Message';
 import { Container } from './ui/Container';
 import { MainTitle, SecondTitle } from './ui';
 
-class Phonebook extends Component {
+class Phonebook extends React.Component {
   state = {
     contacts: [],
     filter: '',

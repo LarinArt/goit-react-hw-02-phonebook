@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-import { Component } from 'react';
+import React from 'react';
 import { Form, Label, Title, Input } from './ContactsForm.style';
 import { Button } from 'components/ui/Button';
 
-class ContactsForm extends Component {
+class ContactsForm extends React.Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired,
   };
