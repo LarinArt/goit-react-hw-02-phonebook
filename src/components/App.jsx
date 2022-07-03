@@ -6,9 +6,9 @@ import { ContactsList } from './contactsList/ContactsList';
 import { Filter } from './filter/Filter';
 import { Message } from './message/Message';
 import { Container } from './ui/Container';
-import { MainTitle, SecondTitle } from './ui';
+import { MainTitle, SecondTitle, Section } from './ui';
 
-class Phonebook extends React.Component {
+class App extends React.Component {
   state = {
     contacts: [],
     filter: '',
@@ -57,22 +57,24 @@ class Phonebook extends React.Component {
 
     return (
       <Container>
-        <MainTitle>Phonebook</MainTitle>
-        <ContactsForm onSubmit={addContact} />
+        <Section>
+          <MainTitle>Phonebook</MainTitle>
+          <ContactsForm onSubmit={addContact} />
 
-        <SecondTitle>Contacts</SecondTitle>
-        <Filter filter={filter} changeFilter={changeFilter} />
-        {length > 0 ? (
-          <ContactsList
-            contacts={filtredContacts}
-            onDeleteContact={deleteContact}
-          />
-        ) : (
-          <Message text="Contact list is empty." />
-        )}
+          <SecondTitle>Contacts</SecondTitle>
+          <Filter filter={filter} changeFilter={changeFilter} />
+          {length > 0 ? (
+            <ContactsList
+              contacts={filtredContacts}
+              onDeleteContact={deleteContact}
+            />
+          ) : (
+            <Message text="Contact list is empty." />
+          )}
+        </Section>
       </Container>
     );
   }
 }
 
-export default Phonebook;
+export default App;

@@ -20,6 +20,11 @@ export const ContactsButton = styled.button`
 `;
 
 export const Number = styled.p`
-  ${({ theme }) => theme.fontWeights.semibold};
-  margin-right: 5px;
+  font-weight: ${({ theme }) => theme.fontWeights.semibold};
+  margin-left: 15px;
+`;
+
+export const Name = styled.p`
+  text-transform: capitalize;
+  font-weight: ${({ theme }) => theme.fontWeights.semibold};
 `;

@@ -2,11 +2,11 @@ const theme = {
   colors: {
     mainTextColor: '#2b2b2b',
     secondTextColor: '#ffffff',
-    accentTextColor: '#0084ff',
+    accentTextColor: '#0015ff',
 
-    mainBgColor: '#ffffff',
+    mainBgColor: '#ffd700',
     secondBgColor: '#2b2b2b',
-    accentBgColor: '#0084ff',
+    accentBgColor: '#0015ff',
 
     mainAnimationHover: '250ms linear',
     mainShadow: '0px 0px 10px 2px rgba(0, 0, 0, 0.5)',
