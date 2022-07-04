@@ -4,7 +4,7 @@ import { ContactsButton, Number, Name } from './Contacts.style';
 import { Wrapper } from 'components/ui/Wrapper';
 import { Icon } from 'components/ui/Icon';
 
-const Contacts = ({ name, number, onDeleteContact, contactId }) => {
+const Contact = ({ name, number, onDeleteContact, contactId }) => {
   return (
     <>
       <Wrapper>
@@ -28,10 +28,10 @@ const Contacts = ({ name, number, onDeleteContact, contactId }) => {
   );
 };
 
-Contacts.prototype = {
+Contact.prototype = {
   name: PropTypes.string.isRequired,
   number: PropTypes.string.isRequired,
   onDeleteContact: PropTypes.func.isRequired,
 };
 
-export default Contacts;
+export default Contact;

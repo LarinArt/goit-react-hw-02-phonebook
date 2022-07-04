@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import Contacts from '../contacts/Contacts';
+import Contact from './Contact/Contact';
 import { ContactsListItem } from './ContactsList.style';
 
 export const ContactsList = ({ contacts, onDeleteContact }) => {
@@ -8,7 +8,7 @@ export const ContactsList = ({ contacts, onDeleteContact }) => {
       {contacts.map(({ id, name, number }) => {
         return (
           <ContactsListItem key={id}>
-            <Contacts
+            <Contact
               name={name}
               number={number}
               onDeleteContact={onDeleteContact}
