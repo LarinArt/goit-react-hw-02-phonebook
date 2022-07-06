@@ -1,9 +1,9 @@
 import React from 'react';
 import { nanoid } from 'nanoid';
 import { Report } from 'notiflix/build/notiflix-report-aio';
-import ContactsForm from './components/ContactsForm/ContactsForm';
-import { Filter } from './components/Filter/Filter';
-import { Message } from './components/Message/Message';
+import ContactsForm from './components/ContactsFormComponent/ContactsForm';
+import { Filter } from './components/FilterComponent/Filter';
+import { Message } from './components/MessageComponent/Message';
 import { Container } from './components/ui/Container';
 import { MainTitle, SecondTitle, Section } from './components/ui';
 import Contacts from 'components/Contacts/Contacts';
