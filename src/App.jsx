@@ -2,7 +2,7 @@ import React from 'react';
 import { nanoid } from 'nanoid';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import ContactsForm from './components/contactsForm/ContactsForm';
-import { Filter } from './components/Filter/Filter';
+import { Filter } from './components/filter/Filter';
 import { Message } from './components/Message/Message';
 import { Container } from './components/ui/Container';
 import { MainTitle, SecondTitle, Section } from './components/ui';
