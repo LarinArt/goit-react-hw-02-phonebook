@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ContactsListItem = styled.li`
+export const ContactsItem = styled.li`
   display: flex;
   align-items: center;
   justify-content: space-around;

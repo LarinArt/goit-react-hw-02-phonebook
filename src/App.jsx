@@ -2,12 +2,11 @@ import React from 'react';
 import { nanoid } from 'nanoid';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import ContactsForm from './components/ContactsForm/ContactsForm';
-// import { ContactsList } from './components/ContactsList/ContactsList';
 import { Filter } from './components/Filter/Filter';
-// import { Message } from './components/Message/Message';
+import { Message } from './components/Message/Message';
 import { Container } from './components/ui/Container';
 import { MainTitle, SecondTitle, Section } from './components/ui';
-import Contacts from 'components/ContactsList/Contacts';
+import Contacts from 'components/Contacts/Contacts';
 
 class App extends React.Component {
   state = {
@@ -30,27 +29,27 @@ class App extends React.Component {
         }));
   };
 
-  // deleteContact = contactId => {
-  //   this.setState(prevState => ({
-  //     contacts: prevState.contacts.filter(contact => contact.id !== contactId),
-  //   }));
-  // };
+  deleteContact = contactId => {
+    this.setState(prevState => ({
+      contacts: prevState.contacts.filter(contact => contact.id !== contactId),
+    }));
+  };
 
   changeFilter = e => {
     this.setState({ filter: e.currentTarget.value });
   };
 
-  // filtredContacts = () => {
-  //   const { filter, contacts } = this.state;
-  //   const normalizedFilter = filter.toLowerCase();
-  //   return contacts.filter(({ name }) =>
-  //     name.toLowerCase().includes(normalizedFilter)
-  //   );
-  // };
+  filtredContacts = () => {
+    const { filter, contacts } = this.state;
+    const normalizedFilter = filter.toLowerCase();
+    return contacts.filter(({ name }) =>
+      name.toLowerCase().includes(normalizedFilter)
+    );
+  };
 
   render() {
     const { filter } = this.state;
-    // const filtredContacts = this.filtredContacts();
+    const filtredContacts = this.filtredContacts();
     return (
       <Container>
         <Section>
@@ -59,15 +58,14 @@ class App extends React.Component {
 
           <SecondTitle>Contacts</SecondTitle>
           <Filter filter={filter} changeFilter={this.changeFilter} />
-          {/* {this.state.contacts.length > 0 ? (
-            <ContactsList
+          {this.state.contacts.length > 0 ? (
+            <Contacts
               contacts={filtredContacts}
               onDeleteContact={this.deleteContact}
             />
           ) : (
             <Message text="Contact list is empty." />
-          )} */}
-          <Contacts />
+          )}
         </Section>
       </Container>
     );

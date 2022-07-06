@@ -1,27 +1,27 @@
 import PropTypes from 'prop-types';
 import Contact from './Contact/Contact';
-import { ContactsListItem } from './ContactsList.style';
+import { ContactsItem } from './Contacts.style';
 
-export const ContactsList = ({ contacts, onDeleteContact }) => {
+const Contacts = ({ contacts, onDeleteContact }) => {
   return (
     <ul>
       {contacts.map(({ id, name, number }) => {
         return (
-          <ContactsListItem key={id}>
+          <ContactsItem key={id}>
             <Contact
               name={name}
               number={number}
               onDeleteContact={onDeleteContact}
               contactId={id}
             />
-          </ContactsListItem>
+          </ContactsItem>
         );
       })}
     </ul>
   );
 };
 
-ContactsList.prototype = {
+Contacts.prototype = {
   contacts: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,
@@ -31,3 +31,5 @@ ContactsList.prototype = {
   ).isRequired,
   onDeleteContact: PropTypes.func.isRequired,
 };
+
+export default Contacts;
